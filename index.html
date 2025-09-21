@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Showcase</title>
+    <style>
+        body {
+            background-image: url('w.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            position: relative;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1400px;
+            padding: 20px;
+            gap: 20px;
+        }
+        .sidebar {
+            position: relative;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+        .sidebar.right {
+            align-items: flex-end;
+            text-align: right;
+        }
+        .sidebar h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .sidebar p {
+            font-size: 18px;
+            line-height: 1.6;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 300px;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 40%;
+            cursor: pointer;
+        }
+        .video-card {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: none;
+        }
+        .label {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            text-align: center;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .sidebar, .video-wrapper {
+                width: 100%;
+                max-width: 600px;
+                align-items: center;
+                text-align: center;
+            }
+            .sidebar.right {
+                align-items: center;
+                text-align: center;
+            }
+            .sidebar p {
+                max-width: none;
+            }
+            .label {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar left">
+        <h2>About Onetap</h2>
+        <p>The desync in Onetap from 2022-25 was absolutely legendary. It made us completely unhittable – bullets just whiffed right by like we were ghosts. Enemies couldn't land a single shot, no matter how hard they tried. People begged us relentlessly for the code, desperate to crack the secret behind our untouchable movement. Resolvers? Useless against us. We dominated every server, ruling Da Hood with an iron fist. Pure chaos and glory.</p>
+    </div>
+    <div class="container">
+        <div class="video-wrapper" id="left-wrapper">
+            <div class="label">2022-25 onetap.lol</div>
+            <div class="video-card" id="left-card">
+                <video autoplay loop muted playsinline>
+                    <source src="x.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="video-wrapper" id="right-wrapper">
+            <div class="label">angelhook 2025 external</div>
+            <div class="video-card" id="right-card">
+                <video autoplay loop muted playsinline>
+                    <source src="z.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar right">
+        <h2>About Angelhook</h2>
+        <p>Angelhook 2025 external took cheating to ethereal heights. Seamless integration with flawless aim and movement prediction made every encounter a symphony of precision. No detection, no bans – just pure, undetectable dominance. Players whispered about our ghostly presence, unable to comprehend how we anticipated every move. The external design ensured rock-solid stability, turning casual lobbies into our personal playgrounds.</p>
+    </div>
+</body>
+</html>
